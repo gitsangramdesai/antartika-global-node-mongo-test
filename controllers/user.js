@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/user').User;
 const userSchema = require('../models/user').userSchema;
+
 const CONSTANT = require('../config/constant.js');
 const JWT_SECRET = CONSTANT.JWT_SECRET;
 

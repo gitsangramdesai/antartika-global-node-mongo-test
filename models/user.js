@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/user');
+const DB = require('../config/db.config.js');
+
+mongoose.connect('mongodb://' + DB.HOST + '/' + DB.DB_NAME);
 
 var userSchema = new Schema({
     firstName:  { type: String, required: true ,minlength: 2, maxlength: 50 },
